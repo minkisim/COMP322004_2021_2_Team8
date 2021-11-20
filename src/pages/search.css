@@ -1,0 +1,157 @@
+.search_artist_page{
+    position: absolute;
+    top:280px;
+    left:450px;
+    width:800px;    
+    border-radius: 25px;
+    background-color:#f0f0f0;
+}
+.search_artist_title{
+    font-size:22px;
+    font-family: Noto Sans KR;
+    font-weight: bold;
+    text-align: left;
+    position: relative;
+    left:70px;
+    top:30px;
+}
+.search_artist_bar{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    top:-50px;
+    left:460px;
+    width:280px;
+    margin-bottom: 20px;
+}
+.search_artist_input{
+    width:200px;
+    height:50px;
+    border-radius: 25px;
+    padding-left: 20px;
+    font-size: 16px;
+    
+}
+.search_artist_bar img{
+    width:45px;
+    height:45px;
+    margin-top: 5px;
+}
+
+.search_artist_list{
+    width:700px;
+    position: relative;
+    top:-50px;
+    left:50px;
+    text-align: left;
+    background-color:#d0d0d0;
+    border-radius: 25px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.search_artist_list_header{
+    width:650px;
+    position: relative;
+    left:25px;
+    display: flex;
+}
+.search_artist_list_header input{
+    position: relative;
+    zoom:1.3;
+    top:12px;
+}
+.search_artist_list_header .header_check{
+    margin-right: 160px;
+}
+.search_artist_list_header .header_name{
+    margin-right: 230px;
+}
+
+
+.search_artist_list_contents{
+    width:650px;
+    position: relative;
+    left:25px;
+    display: flex;
+}
+.search_artist_list_contents input{
+    position: relative;
+    zoom:1.3;
+    top:12px;
+}
+.search_artist_list_contents .contents_check{
+    margin-right: 60px;
+}
+.search_artist_list_contents .contents_name{
+    width: 300px;
+    margin-right: 100px;
+    text-align: center;
+}
+.search_artist_btn_flex{
+    position: relative;
+    left:245px;
+    display: flex;
+    width:220px;
+    justify-content: space-between;
+}
+.search_artist_btn{
+    position: relative;
+    top:30px;
+    width:100px;
+    height:40px;
+    border-radius: 20px;
+    background-color: #000000;
+    text-align: center;
+}
+.search_artist_btn p{
+    color:#e0e0e0;
+    font-size: 14px;
+    margin-top: 10px;
+    font-family: Noto Sans KR;
+    font-weight: 600;
+}
+
+
+.search_artwork_list_header{
+    width:650px;
+    position: relative;
+    left:25px;
+    display: flex;
+}
+.search_artwork_list_header input{
+    position: relative;
+    zoom:1.3;
+    top:12px;
+}
+.search_artwork_list_header .header_check{
+    margin-right: 100px;
+}
+.search_artwork_list_header .header_artwork{
+    margin-right: 260px;
+}
+
+
+.search_artwork_list_contents{
+    width:650px;
+    position: relative;
+    left:25px;
+    display: flex;
+}
+.search_artwork_list_contents input{
+    position: relative;
+    zoom:1.3;
+    top:12px;
+}
+.search_artiwork_list_contents .contents_check{
+    margin-right: 60px;
+}
+.search_artwork_list_contents .contents_artist{
+    width: 300px;
+    margin-right: 20px;
+    text-align: center;
+}
+.search_artwork_list_contents .contents_artwork{
+    width: 300px;
+    margin-right: 20px;
+    text-align: center;
+}

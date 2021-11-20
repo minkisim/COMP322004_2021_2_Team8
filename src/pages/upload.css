@@ -1,0 +1,140 @@
+.admin_btn_flex{
+    position: absolute;
+    top:180px;
+    left:450px;
+    display: flex;
+    width:1000px;
+    height:80px;
+    justify-content: space-between;
+}
+.admin_btn{
+    position: relative;
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right:20px;
+    border-radius: 20px;
+    background-color: #000000;
+}
+.admin_btn p{
+    color:#e0e0e0;
+    font-size:20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Noto Sans KR;
+}
+.Upload_Artwork_Page{
+    position: absolute;
+    top:280px;
+    left:450px;
+    width:1000px;
+    
+    text-align: left;
+    border-radius: 25px;
+    background-color: #f0f0f0;
+    padding-bottom: 50px;
+}
+.Upload_Artwork_Title{
+    position: relative;
+    top:10px;
+    left:120px;
+    font-size: 22px;
+    font-family: Noto Sans KR;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.Upload_Artwork_Box{
+    position: relative;
+    left:100px;
+    width:800px;
+    background-color: #c0c0c0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    padding-bottom: 50px;
+}
+.Upload_input1{
+    position: relative;
+    left:200px;
+    width:400px;
+    height:60px;
+    border-radius: 30px;
+    background-color: #f0f0f0;
+    border: none;
+    padding-left: 20px;
+    font-size: 15px;
+    font-family: Noto Sans KR;
+    margin-top: 20px;
+}
+.Upload_input_file{
+    position: relative;
+    left:200px;
+    width:381px;
+    height:30px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
+    margin-top: 20px;
+}
+.Upload_input2{
+    position: relative;
+    left:200px;
+    width:400px;
+    height:150px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    border: none;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-top: 20px;
+    font-size: 15px;
+    font-family: Noto Sans KR;
+}
+.Upload_date{
+    position: relative;
+    left:200px;
+    width:150px;
+    height:60px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+    margin-top: 20px;
+    font-family: Noto Sans KR;
+    font-size:15px;
+}
+textarea:focus {
+    outline: none;
+}
+.Upload_Artwork_btn_flex{
+    display: flex;
+    position: relative;
+    left:250px;
+    width:280px;
+    justify-content:space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.Upload_Artwork_btn1{
+    position: relative;
+    top:20px;
+    width:100px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #000000;
+    text-align: center;
+}
+.Upload_Artwork_btn1 p{
+    color:#e0e0e0;
+    font-size:16px;
+    margin-top: 8px;
+    font-family: Noto Sans KR;
+    font-weight: 500;
+}
+

@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.login_page_div{
+    margin-bottom:50px;
+}
+
+.login_Slogan1{
+    position: absolute;
+    top:189px;
+    left:837px;
+    width:300px;
+    margin:0px;
+    text-align: left;
+    font-size:24px;
+    font-family: Noto Sans KR;
+}
+
+.login_Slogan2{
+    position: absolute;
+    top:231px;
+    left:527px;
+    width: 900px;
+    margin:0px;
+    text-align: left;
+    font-size:48px;
+    font-family: Noto Sans KR;
+}
+
+.login_box{
+    position: absolute;
+    top:347px;
+    left:751px;
+    width:418px;
+    height:583px;
+    background-color: #F9F9F9;
+    border-radius: 15px;
+}
+
+.login_box img{
+    position:absolute;
+    top:47px;
+    left:149px;
+    width:120px;
+    height:106px;
+    margin-top:0px;
+    margin-bottom: 26px;
+}
+input:focus {outline:none;}
+.login_box input{
+    position: relative;
+    top:180px;
+    width:304px;
+    height:60px;
+    font-size: 13px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border : none;
+}
+
+.login_box_in {
+    position:relative;
+    top:265px;
+    left:48px;
+    display:flex;
+    justify-content: space-between;
+    width:320px;
+}
+.login_box_btn{
+    width:145px;
+    height:60px;
+    background-color: #191919;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 15px;
+}
+
+.login_box_btn p{
+    color:#E9E9E9;
+    font-size: 24px;
+    margin-top: 14px;
+}
+
+
+
+.signup_box{
+    position: absolute;
+    top:147px;
+    left:551px;
+    width:588px;
+    height:733px;
+    background-color: #F9F9F9;
+    border-radius: 15px;
+    padding-bottom: 50px;
+}
+
+.signup_box img{
+    position:absolute;
+    top:47px;
+    left:235px;
+    width:120px;
+    height:106px;
+    margin-top:0px;
+    margin-bottom: 26px;
+}
+input:focus {outline:none;}
+.signup_box input{
+    position: relative;
+    top:180px;
+    width:304px;
+    height:60px;
+    font-size: 13px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border : none;
+}
+
+.signup_btn{
+    position:relative;
+    top:195px;
+    left:220px;
+    width:135px;
+    height:50px;
+    background-color: #191919;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 15px;
+}
+.signup_btn p{
+    color:#E9E9E9;
+    font-size: 20px;
+    padding-top: 12px;
+    
+}
+
+.signup_check_id{
+    position: absolute;
+    top: 190px;
+    left: 465px;
+    width: 105px;
+    height: 45px;
+    background-color: #191919;
+    border-radius: 15px;
+}
+
+.signup_check_id p{
+    color: #E9E9E9;
+    font-size: 16px;
+    padding-top: 0px;
+
+    margin-top: 10px;
+    font-family: Noto Sans KR;
+}
