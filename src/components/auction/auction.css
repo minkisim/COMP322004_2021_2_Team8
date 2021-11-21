@@ -1,0 +1,677 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.auction_Main_Page{
+    position:absolute;
+    top:150px;
+    left:250px;
+    width:1500px;
+}
+
+/* 검색창 */
+.auction_search_bar{
+    width:1350px;
+    position: relative;
+    left:75px;
+    height:80px;
+    display: flex;
+    justify-content: space-between
+}
+.search_bar_artwork{
+    width:260px;
+    display: flex;
+    justify-content: space-between
+}
+.search_bar_artwork p {
+    font-family:Noto Sans KR;
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+
+.search_artist{
+    width:260px;
+    display: flex;
+    justify-content: space-between
+}
+.search_artist p {
+    font-family:Noto Sans KR;
+    font-size: 17px;
+    margin-top: 10px;
+    
+}
+.search_input1{
+    width:194px;
+    height:45px;
+    border-radius: 23px;
+    border : 1px solid #B7B7B7;
+}
+.search_input1 input{
+    position: relative;
+    top:10px;
+    border:none;
+    font-size: 14px;
+    left:10px;
+    width:145px;
+}
+.search_input1 input::placeholder {
+    color: #C3C3C3;
+}
+
+.search_input2{
+    width:194px;
+    height:45px;
+    border-radius: 23px;
+    border : 1px solid #B7B7B7;
+}
+.search_input2 input{
+    position: relative;
+    top:10px;
+    border:none;
+    font-size: 14px;
+    left:10px;
+    width:145px;
+}
+.search_input2 input::placeholder {
+    color: #C3C3C3;
+}
+
+
+.search_price p{
+    font-family:Noto Sans KR;
+    font-size: 17px;
+    margin-top: 10px;
+}
+.search_price{
+    width:260px;
+    height:45px;
+    display: flex;
+    justify-content: space-between;
+}
+.price_btn{
+    position: relative;
+    top:-10px;
+}
+
+.search_num{
+    width:130px;
+    display: flex;
+    justify-content: space-between
+}
+
+.num_input{
+    width:80px;
+    height:45px;
+    border-radius: 23px;
+    border : 1px solid #B7B7B7;
+}
+.num_input input{
+    position: relative;
+    width:30px;
+    top:10px;
+    left:-5px;
+    border:none;
+    font-size: 14px;
+}
+.num_input input::placeholder{
+    color: #C3C3C3
+}
+
+
+.search_btn{
+    width: 106px;
+    height:44px;
+    background-color: #191919;
+    border-radius: 23px;
+}
+.search_btn p{
+    font-family:Noto Sans KR;
+    font-size: 17px;
+    margin-top: 10px;
+    color:#FFFFFF;
+}
+.reset_btn{
+    width: 138px;
+    height:44px;
+    background-color: #EDEDED;
+    border-radius: 23px;
+}
+.reset_btn p{
+    font-family:Noto Sans KR;
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+/* list */
+.auction_list{
+    display: flex;
+    position: relative;
+    top:0px;
+    left:50px;
+    width:1450px;
+    flex-wrap: wrap;
+}
+.auction_ShowWindow{
+    width:310px;
+    height:753px;
+    text-align: center;
+    background-color: #F9F9F9;
+    border-radius: 14px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+.auction_ShowWindow_img{
+    object-fit: contain;
+    margin-top:10px;
+    top:12px;
+    width:286px;
+    height: 390px;
+}
+.auction_ShowWindow_artist{
+    position: relative;
+    top:15px;
+    left:12px;
+    width:286px;
+    display: flex;
+    justify-content: space-between;
+}
+.auction_ShowWindow_artist p
+{
+    font-family: Noto Sans KR;
+    font-size:22px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.auction_ShowWindow_artwork{
+    position: relative;
+    left:12px;
+    text-align: left;
+} 
+.auction_ShowWindow_artwork p{
+    font-size: 12px;
+    font-family: Noto Sans KR;
+    font-weight: 300;
+}
+
+.auction_line1{
+    position: relative;
+    top:5px;
+    left:12px;
+    width:286px;
+    height: 0.8px;
+    background-color: #D3D3D3;
+    margin : 0px;
+    border: none;
+}
+.auction_type{
+    position: relative;
+    top:10px;
+    left:12px;
+    display: flex;
+}
+.auction_type p{
+    font-size: 11px;
+    color:#8d8d8d;
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+.auction_size{
+    text-align: left;
+    position: relative;
+    left:12px;
+    margin-bottom: 20px;
+}
+.auction_size p {
+    font-size: 11px;
+    font-weight: 300;
+    color: #8d8d8d;
+}
+
+.auction_line2{
+    position: relative;
+    top:5px;
+    left:12px;
+    width:286px;
+    height: 2px;
+    background-color: #A5A5A5;
+    margin : 0px;
+    border: none;
+}
+.auction_ShowWindow_price{
+    display: flex;
+    justify-content: space-between;
+    width:286px;
+    position: relative;
+    left:12px;
+    top:20px;
+}
+.auction_ShowWindow_price p{
+    font-size:15px;
+    font-family: Noto Sans KR;
+    margin-top: 10px;
+    font-weight: 700;
+}
+.auction_ShowWindow_KRW p{
+    font-size:11px;
+    font-family: Noto Sans KR;
+    margin-top: 0px;
+    font-weight: 200;
+    margin-bottom: 0px;
+    text-align: right;
+}
+.auction_ShowWindow_USD{
+    margin-bottom: 20px;
+    margin-top:15px;
+}
+.auction_ShowWindow_USD p{
+    font-size:11px;
+    font-family: Noto Sans KR;
+    margin-top: 0px;
+    font-weight: 200;
+    margin-bottom: 0px;
+    text-align: right;
+    margin-right: 12px;
+}
+.auction_ShowWindow_btn{
+    position: relative;
+    top:15px;
+    right:12px;
+    width:102px;
+    height:33px;
+    border-radius: 22px;
+    float: right;
+    background-color: #191919; 
+}
+.auction_ShowWindow_btn p{
+    font-size: 12px;
+    color:#FFFFFF;
+    text-align: center;
+    position: relative;
+    top:8px;
+    margin-top:0px;
+}
+
+/* 경매 작품 상세 페이지*/
+.Auctiondata_Page{
+    position: absolute;
+    top:150px;
+    left:250px;
+    width:1496px;
+    height: 1702px;
+    background-color: #F9F9F9;
+    border-radius: 14px;
+}
+
+.Main_Image{
+    position: absolute;
+    top:100px;
+    left:197px;
+    width:342px;
+    height:520px;
+}
+.Sub_Image1{
+    position: absolute;
+    top:164px;
+    left:69px;
+    width:78px;
+    height:120px;
+}
+.Sub_Image2{
+    position: absolute;
+    top:302px;
+    left:69px;
+    width:78px;
+    height:120px;
+}
+.Sub_Image3{
+    position: absolute;
+    top:440px;
+    left:69px;
+    width:78px;
+    height:120px;
+}
+
+.Artwork_Artist{
+    position: absolute;
+    top:140px;
+    left:632px;
+}
+.Auction_Info_Artist{
+    font-size: 50px;
+    font-family: Noto Sans KR;
+    font-weight: bold;
+    color:#191919;
+}
+.Auction_Info_Artwork{
+    font-size:35px;
+    font-family: Noto Sans KR;
+    font-weight:600;
+    color:#191919;
+}
+.Auction_Info_artistyear{
+    position: absolute;
+    top:183px;
+    left:635px;
+}
+.Auction_Info_artistyear p{
+    font-size:  20px;
+    color:#898989;
+    font-family: Noto Sans KR;
+    font-weight:300;
+}
+
+.Auction_Info_subdata{
+    position: absolute;
+    top:263px;
+    left:635px;
+}
+
+.Auction_Info_size{
+    font-size:20px;
+    color:#5C5C5C;
+    font-family: Noto Sans KR;
+    font-weight:300;
+    margin:0px;
+    text-align: left;
+}
+
+.Auction_Info_type{
+    font-size:20px;
+    color:#5C5C5C;
+    font-family: Noto Sans KR;
+    font-weight:300;
+    margin:0px;
+    text-align: left;
+}
+
+.Auction_Info_year{
+    font-size:20px;
+    color:#5C5C5C;
+    font-family: Noto Sans KR;
+    font-weight:300;
+    margin:0px;
+    text-align: left;
+}
+.Auction_Info_hr1{
+    position: absolute;
+    top:370px;
+    left:580px;
+    width:854px;
+    height:1px;
+    background-color: #BEBEBE;
+    border:none;
+}
+
+.Auction_Info_enddate_flex{
+    position: absolute;
+    top:405px;
+    left:635px;
+    display: flex;
+    width:700px;
+}
+.Auction_Info_enddate{
+    width:300px;
+    text-align: left;
+}
+.enddate_title{
+    font-size:20px;
+    color: #AAAAAA;
+    font-family: Noto Sans KR;
+}
+.enddate_content{
+    font-size: 20px;
+    color: #676767;
+    font-family: Noto Sans KR;
+}
+.countdown_title{
+    font-size:20px;
+    color: #AAAAAA;
+    font-family: Noto Sans KR;
+}
+.countdown_content{
+    font-size:20px;
+    color: #E33821;
+    font-weight: 600;
+    font-family: Noto Sans KR;
+}
+.Auction_Info_hr2{
+    position: absolute;
+    top:450px;
+    left:580px;
+    width:854px;
+    height:1px;
+    background-color: #BEBEBE;
+    border:none
+}
+.Auction_Info_price{
+    position: absolute;
+    top:480px;
+    left:635px;
+    display: flex;
+    width:700px;
+}
+.Auction_Info_nowprice{
+    width:300px;
+    text-align: left;
+}
+.nowprice_title{
+    font-size:20px;
+    color: #5C5C5C;
+    font-family: Noto Sans KR;
+}
+.nowprice_content{
+    font-size:20px;
+    color: #5C5C5C;
+    font-family: Noto Sans KR;
+}
+.price_title{
+    font-size:20px;
+    color: #5C5C5C;
+    font-family: Noto Sans KR;
+}
+.price_content{
+    font-size:20px;
+    color: #5C5C5C;
+    font-family: Noto Sans KR;
+}
+.Auction_Info_pricedata{
+    width:300px;
+    text-align: left;
+}
+
+.Auction_Info_btn{
+    position: absolute;
+    top:550px;
+    left:635px;
+    display: flex;
+    width:700px;
+}
+.Auction_Info_nowbtn{
+    width: 116px;
+    height: 44px;
+    background-color: #A3A3A3;
+    border-radius: 22px;
+    margin-right: 30px;
+}
+.Auction_Info_nowbtn p{
+    position: relative;
+    margin-top: 10px;
+    font-size: 16px;
+    color:#f4f4f4;
+}
+.Auction_Info_submit{
+    width: 116px;
+    height: 44px;
+    background-color: #191919;
+    border-radius: 22px;
+    margin-right: 30px;
+}
+
+.Auction_Info_submit p{
+    position: relative;
+    margin-top: 10px;
+    font-size: 16px;
+    color:#f4f4f4;
+}
+.Auction_Info_hr3{
+    position: absolute;
+    top:734px;
+    left:68px;
+    width:1360px;
+    height:1px;
+    background-color: #BEBEBE;
+    border:none;
+}
+
+.Auction_Info_hr4{
+    position: absolute;
+    top:734px;
+    left:748px;
+    width:1px;
+    height:640px;
+    background-color: #BEBEBE;
+    border:none;
+}
+.artwork_Info{
+    position: absolute;
+    top:745px;
+    left:90px;
+    text-align: left;
+}
+.artwork_Info_title p{
+    font-size: 25px;
+    color: #464646;
+    font-family: Noto Sans KR;
+    font-weight: 400;
+}
+.artwork_Info_content{
+    position: relative;
+    left:25px;
+}
+.artwork_Info_content p{
+    font-size: 25px;
+    color: #676767;
+    font-family: Noto Sans KR;
+    font-weight: 200;
+}
+
+.artist_Info{
+    position: absolute;
+    top:760px;
+    left:780px;
+    text-align: left;
+}
+.artist_Info_title p{
+    font-size: 25px;
+    color: #464646;
+    font-family: Noto Sans KR;
+    font-weight: 400;
+}
+.artist_Info_content{
+    position: relative;
+    
+    left:25px;
+}
+.artist_Info_content p{
+    font-size: 25px;
+    color: #676767;
+    font-family: Noto Sans KR;
+    font-weight: 200;
+}
+.artist_Info_yearInfo{
+    position: relative;
+    left:25px;
+    top:70px;
+}
+.artist_Info_yearInfo p{
+    font-size: 25px;
+    color: #676767;
+    font-family: Noto Sans KR;
+    font-weight: 200;
+}
+
+/* 팝업창 */
+
+.Popup_gray_div{
+    position:absolute;
+    top:152px;
+    left:470px;
+    width: 636px;
+    height:510px;
+    background-color: #2B2B2B;
+    border-radius: 35px;
+    opacity:50%;
+    text-align: left;
+}
+.Popup_title{
+    position: absolute;
+    top:162px;
+    left:650px;
+    font-size: 30px;
+    color:  #FFFFFF;
+}
+.Popup_btn{
+    opacity: 100%;
+    position: absolute;
+    top:172px;
+    left:1010px;
+}
+.Popup_black_div{
+    position:absolute;
+    top:292px;
+    left:498px;
+    width: 579px;
+    height:315px;
+    background-color: #000000;
+    border-radius: 35px;
+    opacity: 70%;
+    text-align: left;
+}
+.popup_box{
+    position:absolute;
+    top:318px;
+    left:498px;
+}
+.Popup_header{
+    display:flex;
+}
+.Popup_header p{
+    color:#FFFFFF;
+    font-size: 18px;
+    font-family: Noto Sans KR;
+}
+.Popup_header_no{
+    margin-left: 42px;
+}
+.Popup_header_ID{
+    margin-left: 64px;
+}
+.Popup_header_price{
+    margin-left: 72px;
+}
+.Popup_header_time{
+    margin-left: 114px;
+}
+
+.Popup_content{
+    display:flex;
+}
+
+.Popup_content p{
+    color:#FFFFFF;
+    font-size: 15px;
+    font-family: Noto Sans KR;
+}
+.Popup_content_no{
+    margin-left:48px;
+}
+.Popup_content_ID{
+    margin-left: 72px;
+    width:150px;
+    text-align: center;
+    margin-left:28px;
+    margin-right: 0px;
+}
+.Popup_content_price{
+    width: 110px;
+    margin-right: 60px;
+}

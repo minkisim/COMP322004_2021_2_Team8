@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.myPage_Page {
+    position: absolute;
+    top: 150px;
+    left: 304px;
+}
+.Transfer_button{
+    position: absolute;
+    top: 190px;
+    left:120px;
+    width:140px;
+    height:45px;
+    background-color: #B27354;
+    border-radius: 15px;
+}
+.MyAuction_button{
+    position: absolute;
+    top: 18px;
+    left:120px;
+    width:90px;
+    height:45px;
+    background-color: #B27354;
+    border-radius: 15px;
+}
+.MyAuction_button p{
+    color:#F9F9F9;
+    font-size: 16px;
+    margin-top:10px;
+    font-family: Noto Sans KR;
+}
+
+.MyQuit_button{
+    position: absolute;
+    top: 18px;
+    left:120px;
+    width:90px;
+    height:45px;
+    background-color: #B27354;
+    border-radius: 15px;
+}
+.MyQuit_button p{
+    color:#F9F9F9;
+    font-size: 16px;
+    margin-top:10px;
+    font-family: Noto Sans KR;
+}
+
+.reload_button {
+    position: absolute;
+    top: 190px;
+    left:120px;
+    width:90px;
+    height:45px;
+    background-color: #B27354;
+    border-radius: 15px;
+}
+
+.reload_button p{
+    color:#F9F9F9;
+    font-size: 16px;
+    margin-top:10px;
+    font-family: Noto Sans KR;
+}
+
+
+.Transfer_button p{
+    color:#F9F9F9;
+    font-size: 16px;
+    margin-top:10px;
+    font-family: Noto Sans KR;
+}
+.name {
+    position: relative;
+    top: 10px;
+    text-align: left;
+    margin-left: 20px;
+    width:100px;
+    font-size: 20px;
+    font-family: Noto Sans KR;
+}
+
+.personal_data_title {
+    position: relative;
+    width: 400px;
+    text-align: left;
+    margin-left: 20px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: Noto Sans KR;
+}
+
+.personal_data_div {
+    width: 400px;
+    height: 100px;
+    background: linear-gradient(to top, #F9F9F9 90%, #181818 10%);
+    border-radius: 15px;
+    text-align: left;
+}
+
+.personal_data_div p {
+    position: relative;
+    top: 20px;
+    left: 30px;
+    font-size: 17px;
+    font-family: Noto Sans KR;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+
+.collection {
+    position: relative;
+    top:10px;
+    width: 1100px;
+    height: 300px;
+    border-radius: 15px;
+    text-align: center;
+    background: linear-gradient(to top, #F9F9F9 80%, #181818 20%);
+    font-size: 18px;
+}
+.collect_num{
+    margin-right: 230px;
+    font-family: Noto Sans KR;
+}
+.collect_art{
+    margin-right: 315px;
+    font-family: Noto Sans KR;
+}
+.collect_artist{
+    margin-right:202px;
+    font-family: Noto Sans KR;
+}
+.collection_header_flex {
+    position: relative;
+    width: 1000px;
+    top: 0px;
+    left: 50px;
+    height: 40px;
+    
+    display: flex;
+    text-align: center;
+    color:#F9F9F9;
+}
+
+.collection_header_flex p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.collection_data_flex {
+    position: relative;
+    top: 20px;
+    width: 1000px;
+    left: 50px;
+    height: 40px;
+    
+    display: flex;
+    text-align: center;
+    
+    background-color: #F9F9F9;
+    border-radius: 15px;
+}
+
+.data_num {
+    margin-left: 17px;
+    margin-right:93px;
+}
+
+.data_picture1{
+    width:350px;
+    margin-right:70px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.data_artist1{
+    width:250px;
+    margin-right: 135px;
+}
+
+.like_art {
+    width: 1100px;
+    text-align: left;
+    position: relative;
+    border-radius: 15px;
+    top: 10px;
+    height: 300px;
+    background: linear-gradient(to top, #F9F9F9 80%, #181818 20%);
+    font-size: 18px;
+    margin-bottom: 300px;
+}
+.like_art_num{
+    margin-right:225px
+}
+.like_art_art{
+    margin-right: 315px;
+    font-family: Noto Sans KR;
+}
+.like_art_artist{
+    margin-right: 210px;
+}
+
+
+.data_picture2{
+    width:350px;
+    margin-right:70px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.data_artist2{
+    width:250px;
+    margin-right: 120px;
+}
+
+/* 양도 페이지 css */
+.Transfer_Page{
+    position: absolute;
+    top:150px;
+    left:280px;
+}
+.Transfer_Page_Title{
+    position: relative;
+    top:0px;
+    left:0px;
+    font-size:20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Noto Sans KR;
+    font-weight: 700;
+    text-align: left;
+}
+.transfer_people_name{text-align: left;}
+.transfer_people_name p{font-weight: 600;}
+.phone{ border-radius: 50px; text-align: left; position: relative; top:40px; left:30px;width:150px; height:40px; background-color: #B27354;}
+.phone p{
+    position: relative;
+    top:8px;
+    left:33px;
+    color:#F9F9F9
+}
+.transfer_people_title{
+    font-size: 16px;
+    position: relative;
+    left:20px;
+    margin-bottom: 0px;
+}
+.people_search_bar{
+    display: flex;
+    position: relative;
+    top:10px;
+    left:20px;
+}
+.people_search_bar input{
+   position: relative;
+   top:3px;
+   width:300px;
+   height:20px;
+   margin-right: 10px;  
+}
+.people_search_bar img{
+    width:30px;
+}
+.people_table{
+    position: relative;
+    top:20px;
+    width:600px;
+    height:150px;
+    background: linear-gradient(to top, #F9F9F9 75%, #181818 25%);
+    border-radius: 15px;
+}
+
+.people_table_header{
+    display: flex;
+    background-color: #F9F9F9;
+}
+.Owner_Item{
+    position: relative;
+    top:0px;
+    left:0px;
+    width:800px;
+}
+.Owner_Item_Title{
+    position: relative;
+    top:0px;
+    left:20px;
+    width:800px;
+    font-size: 16px;
+    text-align: left;
+    font-weight: 600;
+}
+.Owner_table{
+    background: linear-gradient(to top, #F9F9F9 80%, #181818 20%);
+    border-radius: 15px;
+    position: relative;
+    top:0px;
+    width: 800px;
+    height: 200px;
+}
+.Owner_table_header{
+    position: relative;
+    top:0px;
+    display: flex;
+}
+.Owner_table_header p{
+    color:#F9F9F9;
+    font-family: Noto Sans KR;
+    font-size:16px;
+    font-weight: 600;
+}
+
+.Owner_table_content_div{
+    overflow-y: auto;
+    height: 150px;
+}
+
+
+.Owner_table_contents{
+    position: relative;
+    top:0px;
+    display: flex;
+}
+.Owner_table_contents p{
+    font-size:14px;
+}
+.Owner_header_num{
+    position: relative;
+    left:20px;
+    width:50px;
+    text-align: left;
+    margin-top:10px;
+    margin-right:170px;
+}
+.Owner_header_artwork
+{
+    margin-top:10px;
+    margin-right:250px;
+}
+.Owner_header_artist
+{
+    margin-top:10px;
+    margin-right:170px;
+}
+.Owner_header_transfer
+{
+    margin-top:10px;
+    margin-right:0px
+}
+.Owner_content_num
+{
+    position: relative;
+    margin-top:10px;
+    left:32px;
+    margin-right:80px;
+}
+.Owner_content_artwork
+{
+    margin-top:10px;
+    
+    text-align: left;
+    width:300px
+}
+.Owner_content_artist
+{
+    margin-top:10px;
+    
+    text-align: left;
+    width:300px;
+    margin-right: 46px;
+}
+.Owner_content_btn{
+    position: relative;
+    top:10px;
+}
+
+.people_header_name{
+    position: relative;
+    left:30px;
+    margin-top: 10px;
+    margin-right:140px;
+    width:40px;
+    color:#181818;
+}
+.people_header_email{
+    position: relative;
+    margin-top: 10px;
+    margin-right:140px;
+    width:100px;
+    color:#181818;
+}
+.people_header_idCode{
+    position: relative;
+    margin-top: 10px;
+    margin-right:100px;
+    width:100px;
+    color:#181818;
+}
+.people_table_content{
+    display: flex;
+    width:600px;
+    text-align: center;
+}
+.people_table_name{
+    position: relative;
+    left:2px;
+    margin-top: 10px;
+    margin-right:40px;
+    width:88px;
+    color:#181818;
+}
+.people_table_email{
+    position: relative;
+    margin-top: 10px;
+    margin-right:80px;
+    width:160px;
+    color:#181818;
+}
+.people_table_idCode{
+    position: relative;
+    margin-top: 10px;
+    margin-right:0px;
+    width:162px;
+    color:#181818;
+}

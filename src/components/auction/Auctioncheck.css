@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.Bid_back_div{
+    position: absolute;
+    top:80px;
+    left:350px;
+    width:800px;
+    height:500px;
+    background-color: #F9F9F9;
+    border: 3px black solid;
+}
+
+.Bid_back_div2{
+    position: absolute;
+    top:80px;
+    left:350px;
+    width:800px;
+    height:340px;
+    background-color: #F9F9F9;
+    border: 3px black solid;
+}
+
+.Bid_btn{
+    position: absolute;
+    top:0px;
+    left:750px;
+}
+.Bid_title{
+    text-align: left;
+    width: 802px;
+    height: 50px;
+    background-color: #000000;
+}
+.Bid_title span{
+    position: relative;
+    top:5px;
+    left:15px;
+    font-size:22px;
+    font-family: Noto Sans KR;
+    color:#F9F9F9;
+}
+.Bid_hr1{
+    position: absolute;
+    top:40px;
+    left:400px;
+    width: 1px;
+    height: 452px;
+    background-color: #000000;
+    border: none;
+}
+.Bid_price{
+    position: relative;
+    top:20px;
+    left:30px;
+    text-align: left;
+    width:340px;
+    height:170px;
+    border: 2px #a8a8a8 solid; 
+}
+
+.Bid_price_title{
+    position: relative;
+    width:320px;
+    height:30px;
+    top:10px;
+    left:10px;
+    display: flex;
+    justify-content: space-between;
+}
+.Bid_price_title .p1{
+    font-size: 16px;
+    font-family: Noto Sans KR;
+    margin: 0px;
+}
+.Bid_price_title .p2{
+    font-size: 12px;
+    font-family: Noto Sans KR;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.Bid_price_title2{
+    position: relative;
+    width:320px;
+    height:30px;
+    top:10px;
+    left:10px;
+    display: flex;
+    justify-content: space-between;
+}
+.Bid_price_title2 .p1{
+    font-size: 16px;
+    font-family: Noto Sans KR;
+    margin: 0px;
+}
+.Bid_price_title2 .p2{
+    font-size: 12px;
+    font-family: Noto Sans KR;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+.Bid_price input{
+    position: relative;
+    top:18px;
+    left:10px;
+    width:302px;
+    height:40px;
+    text-align: right;
+    padding-right: 10px;
+    font-size:21px
+}
+.Bid_price_block{
+    position: relative;
+    top:10px;
+    left:10px;
+    width:312px;
+    height:40px;
+    text-align: right;
+    padding-right: 50px;
+}
+.Bid_price_block p{
+    font-size: 16px;
+    font-family: Noto Sans KR;
+}
+.warning_text{
+    position: relative;
+    top:30px;
+    left:10px;
+    margin: 0px;
+    font-size: 12px;
+    color:#d12710;
+}
+.warning_text2{
+    position: relative;
+    top:25px;
+    left:10px;
+    margin: 0px;
+    font-size: 12px;
+    color:#d12710;
+}
+.Bid_price_btn_on{
+    position: relative;
+    top:25px;
+    left:10px;
+    width: 320px;
+    height:40px;
+    text-align: center;
+    background-color: #000000;
+}
+.Bid_price_btn_off{
+    position: relative;
+    top:25px;
+    left:10px;
+    width: 320px;
+    height:40px;
+    text-align: center;
+    background-color: #e8e8e8;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.Bid_price_btn_on p{
+    color:#F9F9F9;
+    margin: 0px;
+    position: relative;
+    top:10px;
+}
+.Bid_price_btn_off p{
+    color:#000000;
+    margin: 0px;
+    position: relative;
+    top:10px;
+}
+
+.Bid_check{
+    position: absolute;
+    top:50px;
+    left:410px;
+    text-align: left;
+}
+.Bid_check p{
+    margin:0px;
+    font-size:14px;
+}
+.Bid_check input{
+    margin-top:1px;
+    margin-bottom: 0px;
+    margin-right:5px;
+    zoom: 1.5;
+    
+}
+.Bid_check_flex{
+    position: relative;
+    top:20px;
+    left:10px;
+    display: flex;
+}
+.Bid_check_flex p{
+    color:#d12710;
+    font-size: 15px;
+}
+.Bid_check_textArea{
+    position: relative;
+    top:30px;
+    left:20px;
+    width:345px;
+}
+.Bid_check_textArea p{
+    font-size: 12px;
+    font-family: Noto Sans KR;
+}
+
+.Bid_check_flex2{
+    position: relative;
+    top:20px;
+    left:0px;
+    display: flex;
+}
+.Bid_check_flex2 p{
+    color:#d12710;
+    font-size: 16px;
+}
+.Bid_check_textArea2{
+    position: relative;
+    top:30px;
+    left:20px;
+    width:345px;
+}
+.Bid_check_textArea2 p{
+    font-size: 13px;
+    font-family: Noto Sans KR;
+}
+.Bid_check_btn{
+    position: relative;
+    top:40px;
+    left:25px;
+    width: 330px;
+    height:24px;
+    border: 2px #a8a8a8 solid;
+    text-align: center;
+}
+.Bid_check_btn p{
+    font-size: 14px;
+    font-family: Noto Sans KR;
+}
+.Bid_now{
+    position: relative;
+    top:50px;
+    left:30px;
+    width:340px;
+    height:100px;
+    border: 2px #a8a8a8 solid; 
+}
+.Bid_now_Unit{
+    position: relative;
+    text-align: left;
+    top:10px;
+    left:10px;
+}
+.Bid_now_Unit span{
+    font-size: 14px;
+    font-family: Noto Sans KR;
+}
+
+.Bid_now_price{
+    position: relative;
+    top:40px;
+    left:-10px;
+    text-align: right; 
+}
+.Bid_now_price .span1{
+    font-size: 20px;
+    font-family: Noto Sans KR;
+}
+.Bid_now_price .span2{
+    font-size: 20px;
+    font-family: Noto Sans KR;
+    font-weight: 700;
+}
+

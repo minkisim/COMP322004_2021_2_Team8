@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
+body{
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .Title_Page_back{
+    position: absolute;
+    top:150px;
+    left:220px;
+    width:1690px;
+    height:900px;
+    opacity: 55%;
+  }
+  
+  .Title_Page_div{
+    position: absolute;
+    top:300px;
+    left:220px;
+    width:1690px;
+    height:585.2px;
+    opacity: 80%;
+    background: linear-gradient(to top,#F9F9F9 95%,#191919 5%);
+    border-radius: 15px;
+  }
+  .Title_Page_p1{
+    position: absolute;
+    top:380px;
+    left:720px;
+    font-family: Noto sans KR;
+    font-size: 75px;
+    color: #191919;
+    white-space : nowrap;
+  }
+  .Title_Page_p2{
+    position: absolute;
+    top:540px;
+    left:880px;
+    font-family: Noto sans KR;
+    font-size: 28px;
+    font-weight: 300;
+    color: #191919;
+    white-space : nowrap;
+  }
+  .Title_Page_btn{
+    position: absolute;
+    top:630px;
+    left:1000px;
+    width: 227px;
+    height:77px;
+    background-color: #191919;
+    border-radius: 35px;
+  
+  }
+  .Title_Page_btn p{
+    margin-top: 15px;
+    font-family: Noto Sans KR;
+    font-size:28px;
+    color:#ffffff;
+    white-space : nowrap;
+    font-weight: 300;
+  }
+  
+  
+
+
+
+
+/* Home01 Part */
+
+.Weekly{
+    position: absolute;
+    top:195px;
+    left:290px;
+    font-size:16px;
+    font-weight:bold;
+}
+.show_window_flexbox2{
+    position: absolute;
+    top:226px;
+    left:285px;
+    width: 1500px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right:37px;
+    margin-left:0px;
+}  
+
+.home_artwork_div{
+  position: absolute;
+  
+}
+
+
+/* Home2 Part*/
+
+.home_2_div{
+    position:absolute;
+    top:186px;
+    left:254px;
+    width:1591px;
+    height:903px;
+    background: linear-gradient(to top,#F9F9F9 98%,#181818 2%);
+    border-radius: 15px 15px 15px 15px;
+  }
+  
+  .home_2_div_img{
+    position:absolute;
+    top:75px;
+    left:139px;
+    width:548px;
+  }
+  
+  .home_2_text{
+    position:absolute;
+    left:851px;
+    top:202px;
+    width: 586px;
+    text-align: right;
+  }
+  .home_2_text p{
+    margin:0px;
+  }
+  .home_2_text_1{
+    font-size: 48px;
+  }
+  .home_2_text_2{
+    font-size:20px;
+    font-weight:lighter;
+  }
+  
+  .home_2_textArea{
+    position:absolute;
+    left:850px;
+    top:452px;
+    width:580px;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  
+  .home_2_btn{
+    position:absolute;
+    width:179px;
+    height:80px;
+    left:1017px;
+    top: 737px;
+    background-color: #191919;
+    border-radius: 15px;
+  }
+  .home_2_btn p{
+    text-align:center; 
+    color: #F9F9F9;
+    font-size:23px;
+    margin-top:26px;
+  }
+
+/* Home3 Part */
+
+.home_3_Current{
+    position: absolute;
+    top:152px;
+    left:312px;
+    font-weight: 700;
+}
+.home_3_Slider{
+    position: absolute;
+    top:60px;
+    left:30px;
+    width: 1344px;
+}
+
+
+/* Home4 Part */
+.new_artwork{
+    position: absolute;
+    width:1590px;
+    height:950px;
+    top:127px;
+    left:305px;
+  }
+  .new_artwork p{
+    text-align: left;
+    font-size:17px;
+    font-weight: 700;
+  }
+  .new_artwork_box{
+    position: absolute;
+    width:1590px;
+    height:900px;
+    top:50px;
+    background: linear-gradient(to top,#F9F9F9 99%,#181818 1%);
+    border-radius: 15px 15px 15px 15px;
+  }
+   
+  .new_first{
+    position: absolute;
+    left:150px;
+    top:80px;
+  }
+  .new_second{
+    position: absolute;
+    left:650px;
+    top:290px;
+  }
+  .new_third{
+    position: absolute;
+    left:1070px;
+    top:50px;
+  }
+  .new_art{
+    height:570px;
+    width:287px;
+  }
+  .new_art img{
+    width:287px;
+    height:404px;
+  }
+  .new_art p{
+    font-size:20px;
+    text-align:right;
+    margin:0px;
+  }
+  .new_art_btn{
+    position: relative;
+    top: 60px;
+    left:100px;
+    width:94px;
+    height:31px;
+    background-color: #191919;
+    border-radius: 15px;
+  }
+  .new_art_btn p{
+    padding-top:8px;
+    color:#F9F9F9;
+    font-size:12px;
+    text-align: center;
+    font-weight:normal;
+}
+
+
+
