@@ -39,8 +39,8 @@ body {
 .MyQuit_button{
     position: absolute;
     top: 18px;
-    left:120px;
-    width:90px;
+    left:220px;
+    width:100px;
     height:45px;
     background-color: #B27354;
     border-radius: 15px;

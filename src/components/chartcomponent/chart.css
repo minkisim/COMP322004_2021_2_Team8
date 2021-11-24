@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.graph1 svg{
+    font-size:12px;
+    width:auto;
+    height:auto;
+}
+.graph1{
+    position: absolute;
+    font-family: 'Lato', sans-serif;
+    text-align:right;
+    border-radius: 8px 8px 0px 0px;
+    background: linear-gradient(to top,#F9F9F9 98%,#181818 2%);
+    top:580px;
+    left:315px;
+    width:800px;
+    height:450px;
+}
+.graph_1_title{
+    position: absolute;
+    top:534px;
+    left:315px;
+    font-size:18px;
+    width:400px;
+    text-align: left;
+    margin-top:0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    font-family:Noto Sans KR;
+}  
+
+
+.graph2 svg{
+    font-size:10px;
+    width:auto;
+    height:auto;
+}
+.graph2{
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    border-radius: 15px 15px 15px 15px;
+    background: linear-gradient(to top,#F9F9F9 98%,#181818 2%);
+    top:512px;
+    left:278px;
+    width:984px;
+    height:551px;
+}
+.graph_2_title{
+    position: absolute;
+    top:474px;
+    left:277px;
+    font-size:16px;
+    margin:0px;
+    font-family:Noto Sans KR;
+}  
+.graph3{
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    border-radius: 15px 15px 15px 15px;
+    background: linear-gradient(to top,#F9F9F9 98%,#181818 2%);
+}
+.graph3 svg{
+    width:auto;
+    height:auto;
+}

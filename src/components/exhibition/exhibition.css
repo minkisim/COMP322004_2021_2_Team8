@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* default text */
+.App {
+    text-align: center;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* exhibition flexbox2 */
+.show_window_flexbox1 {
+    position: relative;
+    top: 350px;
+    left: 450px;
+    width: 1500px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.show_window_flexbox2 {
+    position: absolute;
+    top: 226px;
+    left: 305px;
+    width: 1500px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 37px;
+    margin-left: 0px;
+}
+
+
+/* exhibition 2 Part */
+
+.exhibition2 {
+    position: absolute;
+    top: 221px;
+    left: 307px;
+    height: 850px;
+    width: 518px;
+}
+
+.exhibition2_title {
+    position: absolute;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.exhibition2_box {
+    position: absolute;
+    top: 40px;
+    width: 518px;
+    height: 810px;
+    background: linear-gradient(to top, #F9F9F9 99%, #181818 1%);
+    border-radius: 15px;
+}
+
+.exhibition2_img {
+    position: absolute;
+    top: 40px;
+    left: 250px;
+    width: 250px;
+}
+
+.exhibition2_artist {
+    position: absolute;
+    top: 110px;
+    left: 70px;
+    width: 140px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.exhibition2_day {
+    position: absolute;
+    top: 170px;
+    left: 100px;
+    width: 110px;
+    font-size: 11px;
+    text-align: right;
+}
+
+.exhibition2_musium {
+    position: absolute;
+    top: 182px;
+    left: 100px;
+    width: 110px;
+
+    font-size: 11px;
+    text-align: right;
+}
+
+.exhibition2_btn1 {
+    position: absolute;
+    left: 109px;
+    top: 232px;
+    width: 101px;
+    height: 37px;
+    border-radius: 15px;
+    background-color: #191919;
+}
+
+.exhibition2_btn1 p {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    color: #F9F9F9;
+    font-size: 14px;
+}
+
+.exhibition2_textTitle {
+    position: absolute;
+    left: 40px;
+    top: 400px;
+    font-size: 16px;
+    font-family: Noto Sans KR;
+    text-align: left;
+    font-weight: 600;
+}
+
+.exhibition2_textArea {
+    position: absolute;
+    left: 40px;
+    top: 460px;
+    width: 430px;
+    height: 234px;
+    border: none;
+    text-align: left;
+    font: Noto Sans KR;
+    font-size: 15px;
+    background-color: #F9F9F9;
+    overflow:auto;
+}
+
+.exhibition2_textArea:focus {
+    outline: none;
+}
+
+.exhibition2_data_box1 {
+    width: 170px;
+    height: 38px;
+    position: absolute;
+    top: 720px;
+    left: 40px;
+    background-color: #191919;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.exhibition2_data_box1 .data_box_name {
+    font-size: 9px;
+    color: #F9F9F9;
+    padding-left: 10px;
+    padding-top: 3px;
+}
+
+.exhibition2_data_box1 .data_box_number {
+    font-size: 19px;
+    color: #F9F9F9;
+    margin: 0px;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+.exhibition2_data_box2 {
+    width: 239px;
+    height: 38px;
+    position: absolute;
+    top: 720px;
+    left: 230px;
+    background-color: #191919;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.exhibition2_data_box2 .data_box_name {
+    font-size: 9px;
+    color: #F9F9F9;
+    padding-left: 10px;
+    padding-top: 3px;
+}
+
+.exhibition2_data_box2 .data_box_number {
+    font-size: 19px;
+    color: #F9F9F9;
+    margin: 0px;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+.data_date {
+    position: absolute;
+    top: 755px;
+    left: 276px;
+    width: 180px;
+    text-align: right;
+}
+
+.data_date p {
+    font-size: 7px;
+}
+
+.rank_title {
+    position: absolute;
+    top: 237px;
+    left: 899px;
+    font-size: 15px;
+    font-family: Noto Sans KR;
+    font-weight: 700;
+}
+
+.rank_table {
+    width: 528px;
+    height: 322px;
+    background: linear-gradient(to top, #F9F9F9 86%, #181818 14%);
+    border-radius: 15px;
+    position: absolute;
+    top: 281px;
+    left: 849px;
+}
+
+.table_header {
+    display: flex;
+    flex-direction: row;
+    width: 528px;
+}
+
+.table_header div {
+    color: #F9F9F9;
+}
+
+.table_rank {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 160px;
+}
+
+.table_font {
+    font-size: 12px;
+    margin: 0px;
+    font-family: Lato;
+
+}
+
+.table_art {
+    margin-top: 15px;
+    margin-right: 150px;
+    margin-bottom: 20px;
+}
+
+.table_time {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.table_body {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    width: 528px;
+    
+}
+
+.body_rank {
+    margin-top: 10px;
+    margin-left: 37px;
+    margin-right: 10px;
+}
+
+.body_art {
+    margin-top: 10px;
+    margin-left: 40px;
+    width: 260px;
+    text-align: left;
+    
+}
+.body_art p{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.body_time {
+    margin-top: 10px;
+    margin-left:45px;
+}
+
+.body_font {
+    font-size: 16px;
+    margin: 0px;
+    font-family: Lato;
+
+}
+
+
+.customer_graph {
+    position: absolute;
+    top: 666px;
+    left: 913px;
+    width: 869px;
+    height: 400px;
+}
+
+.customer_title {
+    position: absolute;
+    top: 616px;
+    left: 933px;
+    font-size: 15px;
+    font-family: Noto Sans KR;
+    font-weight: 700;
+    margin-left: 30px;
+
+}
+
+.old_graph {
+    position: absolute;
+    top: 267px;
+    left: 1403px;
+    width: 460px;
+    height: 350px;
+    background: linear-gradient(to top, #F9F9F9 98%, #181818 2%);
+    border-radius: 15px;
+}
+
+.old_title {
+    position: absolute;
+    top: 217px;
+    left: 1403px;
+    font-size: 15px;
+    font-family: Noto Sans KR;
+    font-weight: 700;
+    margin-left: 20px;
+
+}
+
+
+/* exhibition3 */
+.exhibition3_simpleSlider {
+    position: absolute;
+    top: 150px;
+    left: 304px;
+    width: 1640px;
+    height: 200px;
+}
+
+.exhibition3_artwork {
+    position: absolute;
+    top: 350px;
+    left: 304px;
+    width: 1500px;
+    height: 500px;
+}
+
+.exhibition3_artwork_title {
+    position: absolute;
+    width: 200px;
+    text-align: left;
+    margin: 0px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.exhibition3_artwork_box {
+    position: absolute;
+    top: 30px;
+    width: 1300px;
+    height: 477px;
+    background: linear-gradient(to top, #F9F9F9 98%, #181818 2%);
+    border-radius: 15px;
+}
+
+.exhibition3_artwork_box_img {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 586px;
+    height: 404px;
+}
+.exhibition3_artwork_box_img img{
+    width: 586px;
+    height: 400px;
+    object-fit: contain;
+}
+
+
+.artwork_box_artist {
+    position: absolute;
+    left: 950px;
+    top: 40px;
+    width: 300px;
+    font-size: 30px;
+    margin: 0px;
+    text-align: right;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.artwork_box_arttype {
+    position: absolute;
+    left: 850px;
+    top: 130px;
+    width: 400px;
+    text-align: right;
+    font-size: 24px;
+    margin: 0px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.artwork_box_artsize {
+    position: absolute;
+    left: 850px;
+    top: 170px;
+    width: 400px;
+    text-align: right;
+    font-size: 14px;
+    font-family: Lato;
+    margin: 0px;
+    font-weight: 200;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.artwork_box_musium {
+    position: absolute;
+    left: 850px;
+    top: 186px;
+    width: 400px;
+    text-align: right;
+    font-size: 14px;
+    font-family: Lato;
+    margin: 0px;
+    font-weight: 200;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.exhibition3_people {
+    position: absolute;
+    left: 850px;
+    top: 350px;
+    width: 197px;
+    height: 45px;
+    background-color: #191919;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.exhibition3_people_title {
+    font-size: 12px;
+    color: #F9F9F9;
+    padding-left: 8px;
+    font-family: Note Sans KR;
+    padding-top: 14px;
+    margin: 0px;
+    width:100px;
+}
+
+.exhibition3_people_number {
+    font-size: 24px;
+    color: #F9F9F9;
+    font-family: Lato;
+    padding-right: 10px;
+    padding-top: 6px;
+    margin: 0px;
+    width:80px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    text-align: right;
+
+}
+
+.exhibition3_total_people {
+    position: absolute;
+    left: 1060px;
+    top: 350px;
+    width: 197px;
+    height: 45px;
+    background-color: #191919;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.exhibition3_total_people_title {
+    font-size: 12px;
+    color: #F9F9F9;
+    padding-left: 10px;
+    font-family: Note Sans KR;
+    padding-top: 15px;
+    margin: 0px;
+}
+
+.exhibition3_total_people_number {
+    font-size: 24px;
+    color: #F9F9F9;
+    font-family: Lato;
+    padding-right: 10px;
+    padding-top: 6px;
+    margin: 0px;
+    width:90px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    text-align: right;
+}
+
+.exhibition3_time_line {
+    position: absolute;
+    left: 1140px;
+    top: 385px;
+    font-family: Note Sans KR;
+    font-size: 10px;
+    font-weight: 200;
+
+}
+
+.exhibition3_old {
+    position: absolute;
+    left: 1140px;
+    top: 860px;
+    width: 403px;
+    height: 400px;
+
+}
+
+.exhibition3_old_div {
+    position: absolute;
+    top: 40px;
+    width: 463px;
+    height: 360px;
+    background: linear-gradient(to top, #F9F9F9 98%, #181818 2%);
+    border-radius: 15px;
+
+}
+
+.exhibition3_old_graph_title {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    font-family: Noto Sans KR;
+}
+
+.exhibition3_old_graph {
+    width: 453px;
+    height: 350px;
+    margin-right: 30px;
+
+}
+
+.art_cumulative_time {
+    position: absolute;
+    top: 870px;
+    left: 304px;
+    width: 800px;
+    height: 400px;
+}
+
+.art_cumulative_time_title {
+    text-align: left;
+    font-size: 16px;
+    font-family: Noto Sans KR;
+    margin: 0px;
+    font-weight: 600;
+}
+
+.cum_time_graph_div {
+    position: absolute;
+    top: 35px;
+    width: 800px;
+    height: 360px;
+    background: linear-gradient(to top, #F9F9F9 85%, #181818 15%);
+    border-radius: 15px;
+
+}
+
+.title_flex {
+    position: relative;
+    top: 10px;
+    text-align: center;
+    display: flex;
+    width: 770px;
+    justify-content: space-between;
+}
+
+.title_flex .time {
+    font-size: 24px;
+    padding-top: 2px;
+    font-family: Lato;
+
+}
+
+.title_flex p {
+    font-size: 12px;
+    margin: 0px;
+    padding-top: 10px;
+    font-family: Noto Sans KR;
+    color: #F9F9F9;
+}
+
+.title_flex_left {
+    width: 240px;
+    display: flex;
+    margin-left: 20px;
+    justify-content: space-between;
+}
+
+.title_flex_right {
+    width: 250px;
+    display: flex;
+    margin-left: 20px;
+    justify-content: space-between;
+
+}
+
+.title_flex_right p {
+    padding-top: 8px;
+    font-size: 16px;
+}
+
+.art_cumulative_time_graph {
+    position: absolute;
+    top: 50px;
+    width: 800px;
+    height: 300px;
+}

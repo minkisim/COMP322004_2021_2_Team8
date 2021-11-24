@@ -150,6 +150,7 @@ export default function AuctionPay(){
                 alert("date Error:\n"+err)
             })
 
+            /*
             axios.post(`http://${dev_ver}:4000/api/auctiondata/artist`,{
             artist : result2.data.artist,
             artname: result2.data.artname
@@ -160,6 +161,7 @@ export default function AuctionPay(){
             .catch((err)=>{
                 alert(err)
             })
+            */
 
 
             })

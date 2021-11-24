@@ -157,6 +157,7 @@ export default function Auctiondata({location, match}){
         })
 
 
+        /*
         axios.post(`http://${dev_ver}:4000/api/auctiondata/artist`,{
             artist : result2.data.artist_id,
             artname: result2.data.artname
@@ -167,7 +168,7 @@ export default function Auctiondata({location, match}){
         .catch((err)=>{
             alert(err)
         })
-
+        */
 
         })
         .catch((err)=>{

@@ -1,0 +1,9 @@
+{
+    "development":{
+        "host" : "localhost",
+        "username" : "vane",
+        "password" : "vane2021@@",
+        "database" : "nodedb",
+        "dialect": "mysql"
+    }
+}
