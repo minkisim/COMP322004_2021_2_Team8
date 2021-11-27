@@ -63,11 +63,12 @@ function Exhibition2({match}){
         if(match.params.exhibition != null && match.params.exhibition != undefined && match.params.exhibition.length>=1)
         {
             jsondata.exhibition = match.params.exhibition
+            
         }
         
         axios.post(`http://${dev_ver}:4000/api/exhibition2/exhibition`,jsondata).then((res)=>{
           
-       // console.log(res.data)
+            // console.log(res.data)
             setexhibition(res.data);
             
         })
