@@ -6,6 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### install node-js 
+
+https://nodejs.org/ko/
+
 ### `npm install`
 
 please install node-module for react front-end page.
