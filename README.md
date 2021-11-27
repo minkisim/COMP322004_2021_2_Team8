@@ -6,11 +6,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### 'npm install'
+### `npm install`
 
 please install node-module for react front-end page.
 
-### '.\install.bat'
+### `.\install.bat`
 
 please install.bat file copy into root folder for install node-module for react back-end server.
 
