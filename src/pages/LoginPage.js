@@ -36,6 +36,11 @@ function LoginPage({history,props}){
         })
     }
     
+    const onKeyPress = (e) => {
+        if(e.key == 'Enter'){
+            loginForm();
+        }
+    }
 
         return(
             <div className="login_page_div">
@@ -44,7 +49,7 @@ function LoginPage({history,props}){
                 <div className="login_box">
                     <img src="/img/logo.png" alt="로고 이미지" />
                     <input maxLength="20" type="text" placeholder="ID" onChange={(e) => setUsername(e.target.value)}/>
-                    <input maxLength="20" type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+                    <input maxLength="20" type="password" placeholder="Password" onKeyPress={onKeyPress} onChange={(e) => setPassword(e.target.value)} />
 
                     <div className="login_box_in">
                         <div className="login_box_btn"><a onClick={loginForm}><p>Log in</p></a></div>

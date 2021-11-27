@@ -84,7 +84,14 @@ export default function AuctionMain(){
 
     function reset()
     {
-
+        axios.get(`http://${dev_ver}:4000/api/AuctionMain/picturedata`)
+        .then((res) => {
+                setpicturedata(res.data);
+                //console.log(picturedata)
+            })
+        .catch( (err)=>{
+            alert(err);
+            });
     }
 
     return(

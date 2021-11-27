@@ -1284,8 +1284,8 @@ app.get('/api/home1/about', (req, res) =>
                         artist: rows[0],
                         artname: rows[1],
                         exhibition: rows[2],
-                        imageurl:rows[3],
-                        art_id:rows[4]
+                        imageurl:rows[3]
+                    
                     }
     
                     //console.log('\n')

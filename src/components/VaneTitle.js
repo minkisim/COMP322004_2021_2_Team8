@@ -61,6 +61,11 @@ function VaneTitle({isLogin,isAdmin}){
       
     }
 
+    const onKeyPress = (e) => {
+      if(e.key == 'Enter'){
+        mainSearch()
+      }
+  }
 
     return(
       <>
@@ -87,7 +92,7 @@ function VaneTitle({isLogin,isAdmin}){
               <option value="3" >전시관</option>
             </select>
 
-          <input type="text" placeholder="검색" onChange={(e) => {setSearch(e.target.value)}} />
+          <input type="text" placeholder="검색" onKeyPress={onKeyPress} onChange={(e) => {setSearch(e.target.value)}} />
           <img src="/img/search_btn.png" onClick={mainSearch} alt="검색버튼"/>
         </div>
         <div className="user_icon">

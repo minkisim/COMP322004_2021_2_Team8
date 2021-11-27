@@ -92,11 +92,20 @@
     top:-10px;
 }
 
+
+.search_num p{
+    font-family:Noto Sans KR;
+    font-size: 17px;
+    margin-top: 10px;
+    width: 85px;
+}
+
 .search_num{
     width:130px;
     display: flex;
     justify-content: space-between
 }
+
 
 .num_input{
     width:80px;
