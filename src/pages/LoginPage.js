@@ -42,7 +42,7 @@ function LoginPage({history,props}){
                 <p className="login_Slogan1">IoT기술과 예술이 만나다</p>
                 <p className="login_Slogan2">작품의 가치를 좀 더 선명하게 확인 해 보세요.</p>
                 <div className="login_box">
-                    <img src="/img/full_logo.png" alt="로고 이미지" />
+                    <img src="/img/logo.png" alt="로고 이미지" />
                     <input maxLength="20" type="text" placeholder="ID" onChange={(e) => setUsername(e.target.value)}/>
                     <input maxLength="20" type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
 

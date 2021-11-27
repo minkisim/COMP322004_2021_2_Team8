@@ -94,7 +94,7 @@ function MyPage({history}){
             <div className="myPage_Page">
                 {/*개인 정보*/}
                 <p className="personal_data_title">내 정보</p>
-                <div className="MyQuit_button" onClick={quit}><p>회원 탈퇴</p></div>
+                <div className="MyQuit_button" onClick={quit}><p>회원 탈퇴</p></div>  
                 <div className="personal_data_div">
                         <p>이름 : {userdata ? userdata.name : null}</p>
                         <p>이메일 : {userdata ? userdata.email : null}</p>

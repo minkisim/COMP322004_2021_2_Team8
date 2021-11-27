@@ -1418,7 +1418,7 @@ app.get('/api/home2',(req,res) => {
         }
 
         //var binds = [[req.body.username]]
-        let query = "select * from ( select  a.image_url, a.art_name, a.displaydate, r.artist_name, a.Art_text,  e.exhibition_id  from  artist r, art a, exhibition e where r.artist_id = a.artist_id AND a.exhibition_id = e.exhibition_id order by art_id desc ) where rownum <= 1 "
+        let query = "select * from ( select  a.image_url, a.art_name, a.displaydate, r.artist_name, a.Art_text,  a.art_id  from  artist r, art a, exhibition e where r.artist_id = a.artist_id AND a.exhibition_id = e.exhibition_id order by art_id desc ) where rownum <= 1 "
         connection.execute(query,
             
             async (err,result) =>
@@ -1803,7 +1803,7 @@ app.get('/api/home4/data', function (req, res) {
         }
 
         //var binds = [[req.body.username]]
-        let query = "select * from ( select r.artist_name , a.art_name, a.image_url, e.exhibition_id  from  artist r, art a, exhibition e where r.artist_id = a.artist_id AND a.exhibition_id = e.exhibition_id order by art_id desc ) where rownum <= 3 "
+        let query = "select * from ( select r.artist_name , a.art_name, a.image_url, a.art_id  from  artist r, art a, exhibition e where r.artist_id = a.artist_id AND a.exhibition_id = e.exhibition_id order by art_id desc ) where rownum <= 3 "
         connection.execute(query,
             
             async (err,result) =>
@@ -1986,7 +1986,7 @@ app.get('/api/exhibition1/data', function (req, res) {
                 }
         
                 //var binds = [[req.body.username]]
-                let query = "select r.artist_name, a.art_name, a.Art_id  from art a, artist r, exhibition e where e.exhibition_id = :id AND a.artist_id = r.artist_id and a.exhibition_id = e.exhibition_id  order by a.art_id desc"
+                let query = "select r.artist_name, e.exhibition_name, a.image_url, a.art_name, a.Art_id  from art a, artist r, exhibition e where e.exhibition_id = :id AND a.artist_id = r.artist_id and a.exhibition_id = e.exhibition_id  order by a.art_id desc"
                 connection.execute(query,
                     {id : {dir: oracledb.BIND_IN, val : Number(req.body.exhibition), type : oracledb.NUMBER}},
                     async (err,result) =>
@@ -2005,12 +2005,12 @@ app.get('/api/exhibition1/data', function (req, res) {
                     {
                         result.rows.forEach((rows,i) => {
                             var data = {
-                                artist:'Joan Miro',
+                                artist:rows[0],
                                 day:'apr 10 - may 11, 2021',
-                                musium:'MoMA Museum',
-                                img:'picture.png',
+                                musium: rows[1],
+                                img:rows[2],
                                 artworkUrl:'#',
-                                textTitle:'국가는 노인과 청소년의 복지향상',
+                                textTitle: rows[3],
                                 textArea:' 을 위한 정책을 실시할 의무를 진다. 언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다. 학교교육 및 평생교육을 포함한 교육제도와 그 운영, 교육재정 및 교원의 지위에 관한 기본적인 사항은 법률로 정한다.신체장애자 및 질병·노령 기타의 사유로 생활능력이 없는 국민은 법률이 정하는 바에 의하여 국가의 보호를 받는다. 대통령은 제3항과 제4항의 사유를 지체없이 공포하여야 한다.원장은 국회의 동의를 얻어 대통령이 임명하고, 그 임기는 4년으로 하며, 1차에 한하여 중임할 수 있다. 모든 국민은 근로의 권리를 가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는 바에 의하여 최저임금제를 시행하여야 한다.선거에 있어서 최고득표자가 2인 이상인 때에는 국회의 재적의원 과반수가 출석한 공개회의에서 다수표를 얻은 자를 당선자로 한다. 공무원의 신분과 정치적 중립성은 법률이 정하는 바에 의하여 보장된다.헌법재판소는 법관의 자격을 가진 9인의 재판관으로 구성하며, 재판관은 대통령이 임명한다. 국가는 과학기술의 혁신과 정보 및 인력의 개발을 통하여 국민경제의 발전에 노력하여야 한다.',
                                 datenumber:351,
                                 totalnumber:'194:36:41',
@@ -2073,7 +2073,7 @@ app.get('/api/exhibition1/data', function (req, res) {
                 }
         
                 //var binds = [[req.body.username]]
-                let query = "select * from (select r.artist_name, a.art_name, a.Art_id  from art a, artist r, exhibition e where a.artist_id = r.artist_id and a.exhibition_id = e.exhibition_id  order by a.art_id desc ) where rownum <= 10"
+                let query = "select * from (select r.artist_name, e.exhibition_name, a.image_url, a.art_name, a.Art_id  from art a, artist r, exhibition e where a.artist_id = r.artist_id and a.exhibition_id = e.exhibition_id  order by a.art_id desc ) where rownum <= 10"
                 connection.execute(query,
                   
                     async (err,result) =>
@@ -2092,12 +2092,12 @@ app.get('/api/exhibition1/data', function (req, res) {
                     {
                         result.rows.forEach((rows,i) => {
                             var data = {
-                                artist:'Joan Miro',
+                                artist:rows[0],
                                 day:'apr 10 - may 11, 2021',
-                                musium:'MoMA Museum',
-                                img:'picture.png',
+                                musium: rows[1],
+                                img:rows[2],
                                 artworkUrl:'#',
-                                textTitle:'국가는 노인과 청소년의 복지향상',
+                                textTitle: rows[3],
                                 textArea:' 을 위한 정책을 실시할 의무를 진다. 언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다. 학교교육 및 평생교육을 포함한 교육제도와 그 운영, 교육재정 및 교원의 지위에 관한 기본적인 사항은 법률로 정한다.신체장애자 및 질병·노령 기타의 사유로 생활능력이 없는 국민은 법률이 정하는 바에 의하여 국가의 보호를 받는다. 대통령은 제3항과 제4항의 사유를 지체없이 공포하여야 한다.원장은 국회의 동의를 얻어 대통령이 임명하고, 그 임기는 4년으로 하며, 1차에 한하여 중임할 수 있다. 모든 국민은 근로의 권리를 가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는 바에 의하여 최저임금제를 시행하여야 한다.선거에 있어서 최고득표자가 2인 이상인 때에는 국회의 재적의원 과반수가 출석한 공개회의에서 다수표를 얻은 자를 당선자로 한다. 공무원의 신분과 정치적 중립성은 법률이 정하는 바에 의하여 보장된다.헌법재판소는 법관의 자격을 가진 9인의 재판관으로 구성하며, 재판관은 대통령이 임명한다. 국가는 과학기술의 혁신과 정보 및 인력의 개발을 통하여 국민경제의 발전에 노력하여야 한다.',
                                 datenumber:351,
                                 totalnumber:'194:36:41',
@@ -2595,6 +2595,30 @@ app.get('/api/exhibition1/data', function (req, res) {
                                               {
                                                 name: '19',
                                                 'Day': 7,
+                                              },
+                                              {
+                                                name: '20',
+                                                'Day': 10,
+                                              },
+                                              {
+                                                name: '21',
+                                                'Day': 11,
+                                              },
+                                              {
+                                                name: '22',
+                                                'Day': 15,
+                                              },
+                                              {
+                                                name: '23',
+                                                'Day': 20,
+                                              },
+                                              {
+                                                name: '24',
+                                                'Day': 17,
+                                              },
+                                              {
+                                                name: '25',
+                                                'Day': 9,
                                               }
                                         ])
                                         break;
@@ -2649,23 +2673,23 @@ app.get('/api/exhibition1/data', function (req, res) {
                                     res.json(
                                         [
                                             {
-                                                name: '10',
+                                                name: '7',
                                                 'Day': 30,
                                               },
                                               {
-                                                name: '11',
+                                                name: '8',
                                                 'Day': 21,
                                               },
                                               {
-                                                name: '12',
+                                                name: '9',
                                                 'Day': 15,
                                               },
                                               {
-                                                name: '13',
+                                                name: '10',
                                                 'Day': 20,
                                               },
                                               {
-                                                name: '14',
+                                                name: '11',
                                                 'Day': 17,
                                               },
                                               
@@ -2676,15 +2700,15 @@ app.get('/api/exhibition1/data', function (req, res) {
                                     res.json(
                                         [
                                             {
-                                                name: '10',
+                                                name: '2019',
                                                 'Day': 100,
                                               },
                                               {
-                                                name: '11',
+                                                name: '2020',
                                                 'Day': 121,
                                               },
                                               {
-                                                name: '12',
+                                                name: '2021',
                                                 'Day': 115,
                                               }
                                         ])
@@ -2759,7 +2783,7 @@ app.get('/api/exhibition1/data', function (req, res) {
                                             
                                             else
                                             {
-                                                var query = "select r.artist_name, a.image_type, a.image_size, e.exhibition_name, a.image_url, a.art_name, a.art_id from artist r, art a, exhibition e where e.exhibition_id = a.exhibition_id and a.artist_id = r.artist_id and r.artist_id IN (select artist_Id from (select artist_id from artist order by artist_id desc) where rownum = 1) "
+                                                var query = "select r.artist_name, a.image_type, a.image_size, e.exhibition_name, a.image_url, a.art_name, a.art_id from artist r, art a, exhibition e where e.exhibition_id = a.exhibition_id and a.artist_id = r.artist_id and r.artist_id IN (select e.artist_id from (select k.artist_id, COUNT(y.art_id) artnum from artist k, art y where y.artist_id = k.artist_id group by k.artist_id order by artnum desc) e where rownum=1) "
 
                                                 var result = await connection.execute(query )
 
@@ -2856,7 +2880,7 @@ app.get('/api/exhibition1/data', function (req, res) {
                                                     
                                                     else
                                                     {
-                                                        var query = "select * from (select artist_name, Artist_info from artist order by artist_id desc) where rownum = 1"
+                                                        var query = "select t.artist_name, t.Artist_info from artist t where t.artist_id IN ( select e.artist_id from (select r.artist_id, COUNT(a.art_id) artnum from artist r, art a where r.artist_id = a.artist_id group by r.artist_id order by artnum desc) e where rownum=1)"
 
                                                         var result = await connection.execute(query)
     
@@ -3498,7 +3522,7 @@ app.get('/api/AuctionMain/picturedata', function (req, res) {
         {                
             console.error(err.message);
         }
-        var query = "select a.Image_url, r.artist_name, a.art_name, a.image_size, a.image_type, a.krw_lower, a.krw_upper, a.usd_lower, a.usd_upper, a.art_id from (art a join artist r on a.artist_id = r.artist_id) join auction u on a.art_id = u.art_id where a.owner_username is null"
+        var query = "select a.Image_url, r.artist_name, a.art_name, a.image_size, a.image_type, a.krw_lower, a.krw_upper, a.usd_lower, a.usd_upper, a.art_id from (art a join artist r on a.artist_id = r.artist_id) join auction u on a.art_id = u.art_id where a.owner_username is null order by u.end_point desc"
 
                 var result = await connection.execute(query)
 
@@ -3627,11 +3651,11 @@ app.post('/api/search_auction',(req,res)=>{
                 }
             }
             else{
-                var query = "select a.Image_url, r.artist_name, a.art_name, a.image_size, a.image_type, a.krw_lower, a.krw_upper, a.usd_lower, a.usd_upper, a.art_id from (art a join artist r on a.artist_id = r.artist_id) join auction u on a.art_id = u.art_id where a.krw_lower >= :lower and a.krw_upper <= :upper"
+                var query = "select a.Image_url, r.artist_name, a.art_name, a.image_size, a.image_type, a.krw_lower, a.krw_upper, a.usd_lower, a.usd_upper, a.art_id from (art a join artist r on a.artist_id = r.artist_id) join auction u on a.art_id = u.art_id where a.owner_username is null and a.krw_lower >= :lower and a.krw_upper <= :upper"
                 var result
                 if(req.body.artist != undefined && req.body.artist.length>=1 && req.body.artname != undefined && req.body.artname.length>=1)
                 {
-                    query = "select a.Image_url, r.artist_name, a.art_name, a.image_size, a.image_type, a.krw_lower, a.krw_upper, a.usd_lower, a.usd_upper, a.art_id from (art a join artist r on a.artist_id = r.artist_id) join auction u on a.art_id = u.art_id where a.art_name like :artname AND r.artist_name like :artistname AND a.krw_lower >= :lower and a.krw_upper <= :upper"
+                    query = "select a.Image_url, r.artist_name, a.art_name, a.image_size, a.image_type, a.krw_lower, a.krw_upper, a.usd_lower, a.usd_upper, a.art_id from (art a join artist r on a.artist_id = r.artist_id) join auction u on a.art_id = u.art_id where a.owner_username is null and a.art_name like :artname AND r.artist_name like :artistname AND a.krw_lower >= :lower and a.krw_upper <= :upper"
                     result = await connection.execute(query,{ artname : req.body.artname+"%", artistname : req.body.artist+"%", lower : req.body.value, upper : req.body.value2})
                     if(result.rows!=undefined)
                     {
@@ -3663,7 +3687,7 @@ app.post('/api/search_auction',(req,res)=>{
 
                 else if(req.body.artist != undefined && req.body.artist.length>=1 && req.body.artname.length<1)
                 {
-                    query = "select a.Image_url, r.artist_name, a.art_name, a.image_size, a.image_type, a.krw_lower, a.krw_upper, a.usd_lower, a.usd_upper, a.art_id from (art a join artist r on a.artist_id = r.artist_id) join auction u on a.art_id = u.art_id where r.artist_name like :artistname AND a.krw_lower >= :lower and a.krw_upper <= :upper"
+                    query = "select a.Image_url, r.artist_name, a.art_name, a.image_size, a.image_type, a.krw_lower, a.krw_upper, a.usd_lower, a.usd_upper, a.art_id from (art a join artist r on a.artist_id = r.artist_id) join auction u on a.art_id = u.art_id where a.owner_username is null and r.artist_name like :artistname AND a.krw_lower >= :lower and a.krw_upper <= :upper"
                     result = await connection.execute(query,{ artistname : req.body.artist+"%", lower : req.body.value, upper : req.body.value2})
                     if(result.rows!=undefined)
                     {
@@ -3693,7 +3717,7 @@ app.post('/api/search_auction',(req,res)=>{
                 }
                 else if( req.body.artname != undefined && req.body.artname.length>=1 && req.body.artist.length<1)
                 {
-                    query = "select a.Image_url, r.artist_name, a.art_name, a.image_size, a.image_type, a.krw_lower, a.krw_upper, a.usd_lower, a.usd_upper, a.art_id from (art a join artist r on a.artist_id = r.artist_id) join auction u on a.art_id = u.art_id where a.art_name like :artname AND a.krw_lower >= :lower and a.krw_upper <= :upper"
+                    query = "select a.Image_url, r.artist_name, a.art_name, a.image_size, a.image_type, a.krw_lower, a.krw_upper, a.usd_lower, a.usd_upper, a.art_id from (art a join artist r on a.artist_id = r.artist_id) join auction u on a.art_id = u.art_id where a.owner_username is null and a.art_name like :artname AND a.krw_lower >= :lower and a.krw_upper <= :upper"
                     result = await connection.execute(query,{ artname : req.body.artname+"%", lower : req.body.value, upper : req.body.value2})
                     if(result.rows!=undefined)
                     {
@@ -3726,7 +3750,7 @@ app.post('/api/search_auction',(req,res)=>{
                     console.log("case 3")
                     console.log(req.body.artist)
                     console.log(req.body.artname)
-                    query = "select a.Image_url, r.artist_name, a.art_name, a.image_size, a.image_type, a.krw_lower, a.krw_upper, a.usd_lower, a.usd_upper, a.art_id from (art a join artist r on a.artist_id = r.artist_id) join auction u on a.art_id = u.art_id where a.krw_lower >= :lower and a.krw_upper <= :upper"
+                    query = "select a.Image_url, r.artist_name, a.art_name, a.image_size, a.image_type, a.krw_lower, a.krw_upper, a.usd_lower, a.usd_upper, a.art_id from (art a join artist r on a.artist_id = r.artist_id) join auction u on a.art_id = u.art_id where a.owner_username is null and a.krw_lower >= :lower and a.krw_upper <= :upper"
                     result = await connection.execute(query,{ lower : req.body.value, upper : req.body.value2})
 
                     if(result.rows!=undefined)
@@ -3824,7 +3848,7 @@ app.post('/api/auctiondata',(req,res)=>{
                     console.log(err)
                 }
 
-                else if(result.rows != undefined)
+                else if(result.rows != undefined && result.rows[0]!=undefined)
                 {
                     data = {
                         artist: result.rows[0][0],
@@ -3984,6 +4008,7 @@ app.post('/api/auctiondata/submit',(req,res)=>{
     console.log(req.body.username)
     console.log(req.body.art_id)
 
+    
     oracledb.getConnection({
         user : dbConfig.user,
         password : dbConfig.password,
@@ -4001,7 +4026,7 @@ app.post('/api/auctiondata/submit',(req,res)=>{
 
         console.log(result.rows)
 
-        if(result.rows[0]==undefined || result.rows[0][0] <= req.body.userprice)
+        if(result.rows[0]==undefined || result.rows[0][0] < req.body.userprice)
         {
 
             query = "select * from user_bid where username = :id and art_id = :art"
@@ -4011,22 +4036,28 @@ app.post('/api/auctiondata/submit',(req,res)=>{
             if(result.rows != undefined && result.rows.length>0)
             {
                 query = "update user_bid set user_price = :1, bid_date = TO_DATE(:2,'YYYY-MM-DD')  where username = :3 and art_id = :4"
-                await connection.execute(query,[req.body.userprice, req.body.updateDate, req.body.username, req.body.art_id],
-                    (err,result)=>{
-                        if(err)
-                        {
-                            console.log(err)
-                        }
-
-                        else if(result.rowsAffected>=1)
+               
+                try{
+                    
+                    var result2 = await connection.execute(query,[req.body.userprice, req.body.updateDate, req.body.username, req.body.art_id])
+                
+                        if(result2.rowsAffected>=1)
                         {
                             connection.commit()
                             res.json({success : true})
                         }
                         else{
+                            connection.rollback()
                             res.json({err : true})
                         }
-                    })
+                    }catch(err)
+                    {
+                        connection.rollback()
+                        console.log(err)
+                        res.json({err : true})
+                    }
+                            
+                        
 
             
 
@@ -4037,7 +4068,9 @@ app.post('/api/auctiondata/submit',(req,res)=>{
                     (err,result)=>{
                         if(err)
                         {
+                            connection.rollback()
                             console.log(err)
+                            res.json({err : true})
                         }
 
                         else if(result.rowsAffected>=1)
@@ -4046,6 +4079,7 @@ app.post('/api/auctiondata/submit',(req,res)=>{
                             res.json({success : true})
                         }
                         else{
+                            connection.rollback()
                             res.json({err : true})
                         }
                     })
@@ -4056,7 +4090,7 @@ app.post('/api/auctiondata/submit',(req,res)=>{
 
         }
         else{
-            res.json(null)
+            res.json({err : true})
         }
     })
 
@@ -4530,6 +4564,61 @@ app.post('/api/deleteuser',(req,res)=>{
     })
 
 })
+
+app.post('/api/mainsearch',(req,res)=>{
+
+    console.log(req.body.check)
+
+    oracledb.getConnection({
+        user : dbConfig.user,
+        password : dbConfig.password,
+        connectString : dbConfig.connectString
+    },
+     async function(err, connection){
+
+        if(err)
+        {
+            console.error(err.message);
+        }
+        else{
+            var query
+            if(req.body.check==1)
+            {
+                query = "select art_id from art where art_name like :val"
+            }
+            
+            else if(req.body.check==2)
+            {
+                query = "select artist_id from artist where artist_name like :val"
+            }
+
+            else if(req.body.check==3)
+            {
+                query = "select exhibition_id from exhibition where exhibition_name like :val"
+            }
+            console.log(query)
+            
+            var result = await connection.execute(query, {val : req.body.name+"%"})
+
+          
+            if(result.rows != undefined && result.rows[0]!=undefined)
+            {
+                res.json({
+                    id:result.rows[0][0]
+                })
+            }
+            else{
+                res.json({
+                    err:true
+                })
+            }
+            
+           
+        }
+    })
+
+})
+
 
 
 app.listen(PORT, () => {

@@ -54,18 +54,22 @@ body {
 }
 .show_window2 .show_window2_picture {
     position: absolute;
-    top: 20px;
-    left: 40px;
-    width: 115px;
+    top: 15px;
+    left: 30px;
+    width: 125px;
+    height:160px;
 }
-
+.show_window2 .show_window2_picture img {
+    object-fit: contain;
+    width: 115px;
+    height: 160px;
+}
 .total_name2 {
     position: absolute;
     top: 20px;
     left: 200px;
     width:250px;
     text-align: left;
-    
 }
 .name2 {
     font-size: 24px;
@@ -176,4 +180,3 @@ body {
     text-overflow:ellipsis;
     white-space:nowrap;
 }
-

@@ -302,7 +302,8 @@ export default function Auctiondata({location, match}){
             }
             else if(result.data.err)
             {
-                alert(result.data.err)
+                alert('현재 다른 사람이 더 높은 가격을 제시하였습니다.')
+                
             }
             else{
                 alert('이전 제시한 가격보다 낮은 가격을 제시할 수 없습니다.')

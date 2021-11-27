@@ -118,7 +118,7 @@ function SignupPage({history}){
         return(
             <div>
                 <div className="signup_box">
-                    <img src="/img/full_logo.png" alt="로고 이미지" />
+                    <img src="/img/logo.png" alt="로고 이미지" />
                     <input maxLength="20" type="text" placeholder="ID" onChange={(e) => {setUsername(e.target.value); setIsIdChecked('no')}} />
                     <div className="signup_check_id" onClick={checkId}><p>중복확인</p></div>
 

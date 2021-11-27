@@ -7,7 +7,7 @@ function ShowWindow2(props){
     //console.log(props.artdata.artist)
     return(
     <div className="show_window2">
-        <div className="show_window2_picture" ><Zoomimage image={props.artdata.imageurl} size='115'></Zoomimage></div>
+        <div className="show_window2_picture" ><Zoomimage image={props.artdata.imageurl} size='125'></Zoomimage></div>
         <div className="total_name2">
             <p className="name2">{props.artdata.artist}</p>
             <p className="name2">{props.artdata.artname}</p>

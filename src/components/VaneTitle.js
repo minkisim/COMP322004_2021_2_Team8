@@ -12,7 +12,8 @@ import {dev_ver} from '../pages/global_const'
 
 function VaneTitle({isLogin,isAdmin}){
     
-
+    const [search, setSearch] = useState('')
+    const [id, setId] = useState(1)
     function logOut()
     {
       
@@ -26,6 +27,40 @@ function VaneTitle({isLogin,isAdmin}){
       //document.cookie = "user= " + "; expires=" + expireDate.toGMTString() + "; path=/";
       window.location.replace("/")
     }
+
+    function mainSearch()
+    {
+      
+      
+      axios.post(`http://${dev_ver}:4000/api/mainsearch`,{check:id, name:search})
+      .then((result)=>{
+        console.log(result.data)
+        if(result.data.id != undefined)
+        {
+          
+          
+          if(id==1)
+              window.location.replace(`/exhibition3/${result.data.id}`)
+            
+
+          else if(id == 2)
+              window.location.replace(`/artist01/${result.data.id}`)
+
+
+          else if(id==3)
+             window.location.replace(`/exhibition2/${result.data.id}`)
+        }
+        else if(result.data.err)
+        {
+          alert('해당 이름의 결과는 존재하지 않습니다.')
+        }
+      })
+      .catch((err)=>{
+        alert(err)
+      })
+      
+    }
+
 
     return(
       <>
@@ -43,9 +78,17 @@ function VaneTitle({isLogin,isAdmin}){
           <li><Link to="/home4">New Artwork</Link></li>
           { isAdmin && <li><Link to="/uploadartist">Admin</Link></li>}
         </ul>
+        
+
         <div className="search_bar">
-          <input type="text" placeholder="검색"/>
-          <img src="/img/search_btn.png" alt="검색버튼"/>
+          <select name = "type" onChange={(e)=>{setId(e.target.value)}}>
+              <option value="1" >작품명</option>
+              <option value="2" >작가명</option>
+              <option value="3" >전시관</option>
+            </select>
+
+          <input type="text" placeholder="검색" onChange={(e) => {setSearch(e.target.value)}} />
+          <img src="/img/search_btn.png" onClick={mainSearch} alt="검색버튼"/>
         </div>
         <div className="user_icon">
         <Link to="/mypage"><div className="icon_sample"></div></Link>
