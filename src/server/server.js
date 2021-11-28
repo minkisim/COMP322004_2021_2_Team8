@@ -3184,7 +3184,7 @@ app.post('/api/myPagefindUser', (req,res) => {
                 }
 
                 
-                else if(result.rows!=undefined){
+                else if(result.rows!=undefined && result.rows[0] != undefined){
                     //console.log(str)
 
                     var jsondata = []

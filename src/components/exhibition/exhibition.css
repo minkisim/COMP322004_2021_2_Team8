@@ -69,8 +69,14 @@ body {
     top: 40px;
     left: 250px;
     width: 250px;
+    height: 350px;
+    object-fit: contain;
 }
-
+.exhibition2_img img{
+    width: 250px;
+    height: 350px;
+    object-fit: contain;
+}
 .exhibition2_artist {
     position: absolute;
     top: 110px;

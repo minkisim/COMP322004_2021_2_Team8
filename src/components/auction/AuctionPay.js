@@ -246,7 +246,7 @@ export default function AuctionPay(){
                     <div className="Bid_title">
                         <span>낙찰품 결제</span>
                         <span> | </span>
-                        <span>미술품명</span>
+                        <span>{data.artname}</span>
                         <img className="Bid_btn" onClick={click_auction_btn2} src="/img/X_btn.png" alt="X" />
                     </div>
                     <div className="Bid_price">

@@ -297,7 +297,7 @@ export default function Auctiondata({location, match}){
         .then((result)=>{
             if(result.data.success)
             {
-                alert('결제 완료. 입찰 작품을 확인해주세요.');
+                alert('입찰 완료. 입찰 작품을 확인해주세요.');
                 window.location.replace("/Myauction");
             }
             else if(result.data.err)
@@ -325,7 +325,7 @@ export default function Auctiondata({location, match}){
                     <div className="Bid_title">
                         <span>경매응찰하기</span>
                         <span> | </span>
-                        <span>미술품명</span>
+                        <span>{data.artname}</span>
                         <img className="Bid_btn" onClick={click_auction_btn2} src="/img/X_btn.png" alt="X" />
                     </div>
                     <div className="Bid_price">

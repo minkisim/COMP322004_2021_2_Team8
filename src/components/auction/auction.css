@@ -92,26 +92,24 @@
     top:-10px;
 }
 
-
-.search_num p{
-    font-family:Noto Sans KR;
-    font-size: 17px;
-    margin-top: 10px;
-    width: 85px;
-}
-
 .search_num{
-    width:130px;
+    width:150px;
     display: flex;
     justify-content: space-between
 }
 
-
 .num_input{
-    width:80px;
+    width:60px;
+    margin-left: 5px;
     height:45px;
     border-radius: 23px;
     border : 1px solid #B7B7B7;
+    
+}
+.search_num p {
+    font-family: Noto Sans KR;
+    font-size: 17px;
+    margin-top: 10px;
 }
 .num_input input{
     position: relative;
@@ -120,6 +118,8 @@
     left:-5px;
     border:none;
     font-size: 14px;
+    text-align: center;
+    
 }
 .num_input input::placeholder{
     color: #C3C3C3
@@ -626,10 +626,10 @@
 }
 .Popup_black_div{
     position:absolute;
-    top:292px;
+    top:302px;
     left:498px;
     width: 579px;
-    height:315px;
+    height:345px;
     background-color: #000000;
     border-radius: 35px;
     opacity: 70%;
