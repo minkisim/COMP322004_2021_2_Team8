@@ -259,9 +259,9 @@ export default function Auctiondata({location, match}){
 
         console.log(currentprice)
         
-        if(parseInt(price)<parseInt(currentprice))
+        if(parseInt(price)<=parseInt(currentprice))
         {
-            alert('현재 가격보다 낮은 가격을 제시할 수 없습니다.')
+            alert('현재 가격보다 높은 가격을 제시하여야 합니다.')
             return false
         }
 
