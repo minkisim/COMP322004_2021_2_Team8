@@ -1,5 +1,5 @@
 module.exports = {
     user : process.env.NODE_ORACLEDB_USER || "university",
     password : process.env.NODE_ORACLEDB_PASSWOR || "comp322",
-    connectString : process.env.NODE_ORACLE_CONNECTIONSTRING || "localhost/orcl3"
+    connectString : process.env.NODE_ORACLE_CONNECTIONSTRING || "localhost/orcl"
 }
