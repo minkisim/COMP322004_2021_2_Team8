@@ -218,13 +218,14 @@ app.post('/api/artist_upload',(req,res) => {
                 var result = await connection.execute(query)
 
                 var idnum
-                if(result.row!=undefined)
+                if(result.rows!=undefined)
                 {
                     idnum = Number(result.rows[0][0])+1
                     console.log("추가 : "+idnum)
                 }
                 else{
                     idnum = 1
+                    console.log('추가 : 1')
                 }
                 query = "insert into artist values (:1, :2, :3, :4, :5)"
                 var result2 = await connection.execute(query,[
@@ -657,59 +658,82 @@ app.post('/api/auction_upload',(req,res) =>{
             }
             else
             {
-    
-                    var query = "select * from (select auction_id from auction order by auction_id desc) where rownum = 1"
-                    var result = await connection.execute(query)
-                    var idnum
-                    if(result.rows != undefined)
-                    {
-                        idnum = Number(result.rows[0][0])+1
-                        console.log("추가 : "+idnum)   
-                    }
-                    else{
-                        idnum = 1
-                    }
-                    query = "select a.art_id, a.artist_id, a.krw_lower from art a where a.art_id = :1 and not exists (select t.art_id from auction t where t.art_id = a.art_id)"
-                    result = await connection.execute(query, [Number(req.body.art_id)])
-    
-                    console.log(result.rows)
+
+                    var  query = "select a.art_id from art a where a.art_id = :1"
+                    var  result = await connection.execute(query, [Number(req.body.art_id)])
+
                     if(result.rows!=undefined && result.rows[0] != undefined)
                     {
-                        query = "insert into auction values (:1, :2, TO_DATE(:3,'YYYY-MM-DD'), TO_DATE(:4,'YYYY-MM-DD'), :5, :6, :7, :8, :9)"
-                        var result2 = await connection.execute(query,[
-                            idnum,
-                            req.body.unit,
-                            req.body.begintime,
-                            req.body.endtime,
-                            Number(result.rows[0][2]),
-                            null,
-                            req.session.user.username,
-                            Number(result.rows[0][1]),
-                            Number(result.rows[0][0])      
-                            
-                        ])
-        
-                        if(result2.rowsAffected>0)
+    
+                        query = "select * from (select auction_id from auction order by auction_id desc) where rownum = 1"
+                        result = await connection.execute(query)
+                        var idnum
+                        if(result.rows != undefined)
                         {
-                            connection.commit()
-                            res.json({
-                                success:true
-                            })
+                            idnum = Number(result.rows[0][0])+1
+                            console.log("추가 : "+idnum)   
+                        }
+                        else{
+                            idnum = 1
+                        }
+
+
+                        
+                        query = "select a.art_id, a.artist_id, a.krw_lower from art a where a.art_id = :1 and not exists (select t.art_id from auction t where t.art_id = a.art_id)"
+                        result = await connection.execute(query, [Number(req.body.art_id)])
+        
+                        console.log(result.rows)
+                        if(result.rows!=undefined && result.rows[0] != undefined)
+                        {
+                            query = "insert into auction values (:1, :2, TO_DATE(:3,'YYYY-MM-DD'), TO_DATE(:4,'YYYY-MM-DD'), :5, :6, :7, :8, :9)"
+
+                            try{
+                                var result2 = await connection.execute(query,[
+                                    idnum,
+                                    req.body.unit,
+                                    req.body.begintime,
+                                    req.body.endtime,
+                                    Number(result.rows[0][2]),
+                                    null,
+                                    req.session.user.username,
+                                    Number(result.rows[0][1]),
+                                    Number(result.rows[0][0])      
+                                    
+                                ])
+                
+                                if(result2.rowsAffected>0)
+                                {
+                                    connection.commit()
+                                    res.json({
+                                        success:true
+                                    })
+                                }
+                                else{
+                                    res.json({
+                                        success:false
+                                    })
+                                }
+                            }catch(err)
+                            {
+                                connection.rollback()
+                                res.json({
+                                    err:err
+                                })
+                            }
+                            
                         }
                         else{
                             res.json({
-                                success:false
+                                auctionexist:true
                             })
                         }
-                        
-                    }
-                    else{
-                        res.json({
-                            nosuchart:true
-                        })
-                    }
-    
-                   
+        
+                }
+                else{
+                    res.json({
+                        nosuchart:true
+                    })
+                }
     
             }
         })

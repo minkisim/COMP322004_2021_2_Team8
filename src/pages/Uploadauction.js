@@ -67,6 +67,10 @@ export default function UploadAuction(){
                 alert('로그인이 필요합니다.')
                 document.location.href='/loginPage'
             }
+            else if(result.data.auctionexist)
+            {
+                alert('이미 경매에 등록된 작품입니다.')
+            }
             else if(result.data.nosuchart)
             {
                 alert('해당 작품이 존재하지 않습니다.')
