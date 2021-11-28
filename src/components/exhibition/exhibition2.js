@@ -121,7 +121,7 @@ function Exhibition2({match}){
                     <p className="exhibition2_artist">{`${exhibition[0].artist} :`}</p>
                     <p className="exhibition2_day">{exhibition[0].day}</p>
                     <p className="exhibition2_musium">{exhibition[0].musium}</p>
-                    <div className="exhibition2_btn1"><a href={exhibition[0].artworkUrl}><p>Art Work</p></a></div>
+                    <Link to={exhibition[0].artworkUrl}><div className="exhibition2_btn1"><p>Art Work</p></div></Link>
                     <p className="exhibition2_textTitle">{exhibition[0].textTitle}</p>
                     <div className="exhibition2_textArea">
                         {exhibition[0].textArea}
